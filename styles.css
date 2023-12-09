@@ -37,8 +37,8 @@ aside {
   flex-wrap: wrap;
 }
 
-.item {
-  width: 37.5px;
-  height: 37.5px;
+.cell {
+  /* width: 37.5px; */
+  /* height: 37.5px; */
   background-color: #b8b8ff;
 }
