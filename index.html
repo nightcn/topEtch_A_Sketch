@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="sketch.js" defer></script>
+</head>
+<body>
+    <main>
+        <aside>
+            <label for="sides">Choose grid size:</label>
+            <div class="side-control">
+            <input type="range" name="sides" id="sides" min="1" max="100" step="1" value="16">
+            <output class="output-sides" for="sides"></output>
+            </div>
+            <button class="reset-board">Reset</button>
+        </aside>
+        <div class="board">
+            <div class="item"></div>
+        </div>
+    </main>
+</body>
+</html>
