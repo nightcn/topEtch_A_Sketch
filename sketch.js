@@ -9,7 +9,6 @@ function drawCell(size) {
 
   const gridCell = document.createElement("div");
   gridCell.style.setProperty("flex-basis", cellHeightWidth);
-  gridCell.style.setProperty("height", cellHeightWidth);
 
   divBoard.appendChild(gridCell);
 }
@@ -36,8 +35,15 @@ btnClearGrid.addEventListener("click", (e) => {
   clearGrid(divBoard);
 });
 
-//  {
-//   drawGrid();
-// }
+btnGridSize.addEventListener("click", function (e) {
+  if (divBoard.firstChild) {
+    clearGrid(divBoard);
+  }
 
-drawGrid(2);
+  let gridSize = +prompt("Enter grid size (1-100)");
+  if (gridSize <= 100 && gridSize >= 1) {
+    drawGrid(gridSize);
+  } else {
+    alert("Invalid size, try again");
+  }
+});
