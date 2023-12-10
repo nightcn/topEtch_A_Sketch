@@ -40,5 +40,8 @@ aside {
 .cell {
   /* width: 37.5px; */
   /* height: 37.5px; */
+}
+
+.board div {
   background-color: #b8b8ff;
 }

@@ -1,26 +1,29 @@
 const sliderSides = document.querySelector("#sides");
 const outputEl = document.querySelector(".output-sides");
 const divBoard = document.querySelector(".board");
+const btnClearGrid = document.querySelector(".clear-grid");
+const btnGridSize = document.querySelector(".grid-size");
 
 function drawCell(size) {
-  let cellHeightWidth = 600 / size + "px";
+  let cellHeightWidth = (1 / size) * 100 + "%";
+
   const gridCell = document.createElement("div");
-  gridCell.classList.add("cell");
-  gridCell.style.width = cellHeightWidth;
-  gridCell.style.height = cellHeightWidth;
+  gridCell.style.setProperty("flex-basis", cellHeightWidth);
+  gridCell.style.setProperty("height", cellHeightWidth);
+
   divBoard.appendChild(gridCell);
 }
 
-function drawGrid(size) {
-  if (document.querySelector(".cell")) {
-    while (divBoard.firstChild) {
-      divBoard.removeChild(divBoard.firstChild);
-    }
-    // console.log("cells after: " + document.querySelectorAll(".cell").length);
+function clearGrid(boardElement) {
+  while (boardElement.firstChild) {
+    divBoard.removeChild(boardElement.firstChild);
   }
+  console.log("cleared");
+}
+
+function drawGrid(size) {
   for (let n = 0; n < size ** 2; n++) {
     drawCell(size);
-    console.log("cells: " + document.querySelectorAll(".cell").length);
   }
 }
 
@@ -29,8 +32,12 @@ sliderSides.addEventListener("input", (e) => {
   outputEl.textContent = sliderSides.value;
 });
 
+btnClearGrid.addEventListener("click", (e) => {
+  clearGrid(divBoard);
+});
+
 //  {
 //   drawGrid();
 // }
 
-drawGrid(6);
+drawGrid(2);
