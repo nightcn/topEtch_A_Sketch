@@ -12,7 +12,6 @@ main {
   display: flex;
   width: 900px;
   margin: 5% auto;
-  background-color: ;
 }
 
 aside {
@@ -35,6 +34,7 @@ aside {
   background-color: #ffeedd;
   display: flex;
   flex-wrap: wrap;
+  padding: 2px;
 }
 
 .cell {
@@ -42,6 +42,12 @@ aside {
   /* height: 37.5px; */
 }
 
-.board div {
+.board > div {
   background-color: #b8b8ff;
+  border-radius: 3%;
+  border: 1px solid white;
+}
+
+.pen {
+  background-color: green !important;
 }

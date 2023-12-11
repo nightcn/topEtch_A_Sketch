@@ -3,12 +3,22 @@ const outputEl = document.querySelector(".output-sides");
 const divBoard = document.querySelector(".board");
 const btnClearGrid = document.querySelector(".clear-grid");
 const btnGridSize = document.querySelector(".grid-size");
+const sketchMode = document.querySelectorAll("[name='tool']");
+
+// function sketchTool() {
+//   return Array.from(sketchMode).filter((el) => el.checked)[0].value;
+// }
+
+// console.log(sketchTool());
 
 function drawCell(size) {
   let cellHeightWidth = (1 / size) * 100 + "%";
 
   const gridCell = document.createElement("div");
   gridCell.style.setProperty("flex-basis", cellHeightWidth);
+  // gridCell.addEventListener("mouseover", function (e) {
+  //   e.target.classList.add(`${sketchTool()}`);
+  // });
 
   divBoard.appendChild(gridCell);
 }
