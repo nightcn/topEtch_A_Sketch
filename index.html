@@ -9,17 +9,19 @@
 </head>
 <body>
     <main>
+        <header>
+            <h1>Etch-A-Sketch</h1>
+        </header>
         <aside>
-            <label for="sides">Choose grid size:</label>
-            <div class="side-control">
-            <input type="range" name="sides" id="sides" min="2" max="100" step="2" value="16">
-            <output class="output-sides" for="sides"></output>
+            <div class="cpanel">
+            <span class="icon"></span>
+            <h2>Control panel</h2>
             </div>
-            <button class="reset-board">Reset</button>
+            <button class="reset-board">Reset grid</button>
             <button class="grid-size">Grid size</button>
             <button class="clear-grid">Clear grid</button>
             <fieldset class="draw-control">
-                <legend>Choose option</legend>
+                <legend><span>Choose tool</span></legend>
                 <div>
                     <input type="radio" id="pen" name="tool" value="pen" checked><label for="pen">Pen</label>
                 </div>

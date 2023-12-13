@@ -1,5 +1,4 @@
 const sliderSides = document.querySelector("#sides");
-const outputEl = document.querySelector(".output-sides");
 const divBoard = document.querySelector(".board");
 const btnClearGrid = document.querySelector(".clear-grid");
 const btnGridSize = document.querySelector(".grid-size");
@@ -7,10 +6,8 @@ const btnResetBoard = document.querySelector(".reset-board");
 const sketchMode = document.querySelectorAll("[name='tool']");
 
 function sketchTool() {
-  return Array.from(sketchMode).filter((el) => el.checked)[0].value;
+  return Array.from(sketchMode).filter((el) => el.checked)[0].value; // function to return chosen sketch tool (pen, eraser, rainbow)
 }
-
-// console.log(sketchTool());
 
 function randomRGBval() {
   return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
@@ -20,7 +17,7 @@ function randomRGBval() {
 
 function drawCell(size) {
   let cellHeightWidth = (1 / size) * 100 + "%";
-  let isPainted = [false, false, false]; // Boolean array to check if cell is painted by any of the drawing tools (pen, eraser, rainbow)
+  let isPainted = [false, false, false]; // Boolean array to check if cell is painted by any of the drawing tools [pen, eraser, rainbow]
 
   const gridCell = document.createElement("div");
   gridCell.style.setProperty("flex-basis", cellHeightWidth);
@@ -71,12 +68,7 @@ function drawGrid(size) {
   return size;
 }
 
-let sizeOfGrid;
-
-outputEl.textContent = sliderSides.value;
-sliderSides.addEventListener("input", (e) => {
-  outputEl.textContent = sliderSides.value;
-});
+let sizeOfGrid; // Determain grid size after each creation
 
 btnClearGrid.addEventListener("click", (e) => {
   clearGrid(divBoard);
