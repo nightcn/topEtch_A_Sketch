@@ -19,6 +19,7 @@ main {
 header {
   width: 100%;
   text-align: center;
+  margin-bottom: 20px;
 }
 aside {
   padding: 5px 0px 0px 8px;
@@ -57,6 +58,7 @@ aside button {
   width: 80%;
   margin-bottom: 5px;
   padding: 10px 0px;
+  font-size: 1.2rem;
 }
 
 .cpanel {
@@ -86,6 +88,8 @@ aside button {
 }
 
 .draw-control span {
+  color: #fff;
+  font-size: 1.1rem;
   padding: 0px 3px;
 }
 
@@ -94,5 +98,35 @@ aside button {
 }
 
 .draw-control label {
+  font-size: 1.2rem;
   margin-left: 5px;
+}
+
+.tool-icon {
+  display: inline-block;
+  margin-left: 10px;
+  background-size: cover;
+  width: 25px;
+  height: 25px;
+}
+
+.penSVG {
+  background-image: url(./assets/marker-svgrepo-com.svg);
+}
+
+.paintSVG {
+  background-image: url(./assets/paint-palette-art-svgrepo-com.svg);
+}
+
+.eraserSVG {
+  background-image: url(./assets/eraser-remove-svgrepo-com.svg);
+}
+
+.title-icon {
+  display: inline-block;
+  background-image: url(./assets/paint-brush-art-svgrepo-com.svg);
+  margin-left: 10px;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
 }
